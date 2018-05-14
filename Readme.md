@@ -2,6 +2,9 @@
 
 * Студент: [Александр Шпилька](https://up.htmlacademy.ru/adaptive/14/user/616093).
 * Наставник: [Александр Кошара](https://htmlacademy.ru/profile/rednaxxxela).
+* Ссылка на gh-pages (index): [Mishka](https://alexandershpilka.github.io/Mishka/build/).
+* Ссылка на gh-pages (catalog page): [Mishka - Catalog](https://alexandershpilka.github.io/Mishka/build/catalog.html).
+* Ссылка на gh-pages (order form page): [Mishka - Order Form](https://alexandershpilka.github.io/Mishka/build/form.html).
 
 ---
 

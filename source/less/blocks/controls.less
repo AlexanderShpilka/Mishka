@@ -1,0 +1,72 @@
+.controls__button {
+  position: relative;
+
+  display: inline-block;
+  width: 130px;
+  height: 52px;
+
+  border: 1px solid #ececec;
+  background: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    display: block;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &--prev {
+    margin-right: -5px;
+
+    &::before {
+      top: 12px;
+      left: 37px;
+
+      width: 50px;
+      height: 26px;
+
+      background-image: url("../img/icon-left-arrow.svg");
+    }
+  }
+
+  &--next {
+    &::before {
+      top: 12px;
+      left: 38px;
+
+      width: 50px;
+      height: 26px;
+
+      background-image: url("../img/icon-right-arrow.svg");
+    }
+  }
+
+  &:hover::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .controls__button {
+    width: 84px;
+
+    border: none;
+
+    &--prev::before {
+      left: 15px;
+    }
+
+    &--next::before {
+      left: 18px;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.button {
+  display: block;
+  width: 260px;
+  min-height: 52px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #444444;
+  text-align: center;
+  text-transform: uppercase;
+
+  border: 2px solid #444444;
+  cursor: pointer;
+
+  &--bigger-font-size {
+    padding-top: 13px;
+
+    font-size: 18px;
+  }
+
+  &--modal {
+    padding-top: 5px;
+
+    color: #ffffff;
+
+    background-color: @greenLight;
+    border: none;
+  }
+
+  &--production {
+    width: 192px;
+  }
+
+  &--form {
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    background-color: transparent;
+  }
+
+  &:hover:not(.button--modal) {
+    color: #ffffff;
+
+    background-color: #444444;
+  }
+
+  &:active:not(.button--modal) {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #444444;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    &--modal {
+      width: 350px;
+    }
+
+    &--production {
+      width: 584px;
+    }
+
+    &--form {
+      width: 230px;
+    }
+
+    &--popular {
+      width: 290px;
+    }
+
+    &--bigger-font-size {
+      padding-top: 15px;
+
+      font-size: 17px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button {
+    &--production {
+      width: 230px;
+    }
+  }
+}

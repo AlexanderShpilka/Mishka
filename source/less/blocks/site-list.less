@@ -1,0 +1,294 @@
+.site-list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.site-list__item {
+  position: relative;
+
+  min-height: 79px;
+  padding-top: 28px;
+  padding-bottom: 10px;
+  padding-left: 45px;
+
+  &--top {
+    padding-top: 22px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  &--search,
+  &--cart {
+    padding-left: 0;
+  }
+
+  &--new,
+  &--sale {
+    display: none;
+  }
+}
+
+.site-list__link {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &--search,
+  &--cart {
+    position: relative;
+
+    padding-left: 45px;
+  }
+}
+
+.site-list__link:hover .site-list__icon {
+  fill: @greenLight;
+  opacity: 1;
+}
+
+.site-list__link:active .site-list__icon {
+  fill: @greenLight;
+  opacity: 0.3;
+}
+
+.site-list__icon {
+  position: absolute;
+
+  fill: #231f20;
+  opacity: 0.2;
+
+  &--search {
+    top: 4px;
+    left: 3px;
+  }
+
+  &--cart {
+    top: 2px;
+    left: 1px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 11px;
+    padding-bottom: 15px;
+  }
+
+  .site-list__item {
+    padding-top: 12px;
+    padding-bottom: 17px;
+
+    &--top {
+      width: 320px;
+      padding-top: 11px;
+
+      text-align: left;
+    }
+
+    &--catalog {
+      padding-top: 15px;
+      padding-right: 20px;
+      padding-left: 0;
+      order: 1;
+
+      .site-list__link {
+        font-size: 15px;
+      }
+    }
+
+    &--order {
+      padding-top: 15px;
+      padding-right: 20px;
+      padding-left: 15px;
+      order: 2;
+
+      .site-list__link {
+        font-size: 15px;
+      }
+    }
+
+    &--search {
+      position: relative;
+
+      margin-left: auto;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: -11px;
+        left: -36px;
+
+        display: block;
+        width: 1px;
+        height: 89px;
+
+        background-color: #ececec;
+      }
+    }
+
+    &--cart {
+      position: relative;
+
+      padding-top: 20px;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: -11px;
+        left: -3px;
+
+        display: block;
+        width: 1px;
+        height: 89px;
+
+        background-color: #ececec;
+      }
+    }
+
+    &--search .site-list__link {
+      font-size: 0;
+    }
+  }
+
+  .site-list__link {
+    &--cart {
+      padding-left: 80px;
+    }
+
+    &--search {
+      padding-left: 50px;
+    }
+  }
+
+  .site-list__link--search:focus .site-list__icon {
+    outline: 2px solid #5b9dd9;
+  }
+
+  .site-list__icon {
+    &--cart {
+      top: 3px;
+      left: 29px;
+    }
+
+    &--search {
+      top: -3px;
+      left: -3px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    padding-top: 5px;
+  }
+
+  .site-list__item {
+    padding-top: 27px;
+    padding-bottom: 5px;
+
+    &--catalog {
+      position: relative;
+
+      width: 185px;
+      order: 0;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: -5px;
+        right: 0;
+
+        display: block;
+        width: 1px;
+        height: 89px;
+
+        background-color: #ececec;
+      }
+
+      .site-list__link {
+        font-size: 17px;
+      }
+    }
+
+    &--order {
+      width: 230px;
+      padding-left: 34px;
+      padding-right: 10px;
+      order: 0;
+
+      .site-list__link {
+        font-size: 17px;
+      }
+    }
+
+    &--top {
+      width: 149px;
+      padding-top: 4px;
+      margin-left: 35px;
+      order: 1;
+    }
+
+    &--search {
+      width: 85px;
+      order: 2;
+
+      &::before {
+        top: -5px;
+        left: 0;
+      }
+    }
+
+    &--cart {
+      width: 265px;
+      padding-right: 0;
+      padding-left: 1px;
+      order: 2;
+
+      .site-list__link {
+        font-size: 17px;
+      }
+
+      &::before {
+        top: -5px;
+        left: -2px;
+      }
+    }
+
+    &--new,
+    &--sale {
+      order: 3;
+      display: block;
+      padding-top: 16px;
+      padding-left: 0;
+
+      .site-list__link {
+        padding-right: 60px;
+
+        font-size: 15px;
+      }
+    }
+  }
+
+  .site-list__icon {
+    &--search {
+      top: -12px;
+      left: 33px;
+    }
+  }
+}

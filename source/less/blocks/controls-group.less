@@ -1,0 +1,144 @@
+.controls-group {
+  padding: 0;
+  padding-bottom: 30px;
+  border: none;
+
+  &--textarea {
+    padding-bottom: 15px;
+  }
+}
+
+.controls-group__radio,
+.controls-group__checkbox,
+.controls-group__input {
+  display: block;
+}
+
+.controls-group__title {
+  position: relative;
+
+  display: block;
+  padding-bottom: 18px;
+
+  font-size: 17px;
+  font-weight: 700;
+  color: @greenLight;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 11px;
+    left: 58px;
+
+    display: block;
+    width: 198px;
+    height: 1px;
+
+    background-color: @greenLight;
+  }
+
+  &--email {
+    padding-bottom: 5px;
+  }
+
+  &--email::after {
+    left: 77px;
+
+    width: 179px;
+  }
+
+  &--fullname {
+    padding-bottom: 24px;
+  }
+
+  &--phone {
+    padding-bottom: 7px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .controls-group {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &--no-bottom {
+      padding-bottom: 0;
+    }
+
+    &--no-top {
+      padding-top: 0;
+    }
+
+    &--checkbox {
+      padding-bottom: 37px;
+    }
+  }
+
+  .controls-group__wrap {
+    display: flex;
+    width: 668px;
+  }
+
+  .controls-group__title {
+    width: 168px;
+    padding-top: 26px;
+    padding-right: 20px;
+
+    &::after {
+      display: none;
+    }
+
+    &--fullname {
+      padding-top: 24px;
+    }
+  }
+
+  .controls-group__labels {
+    display: flex;
+    width: 500px;
+
+    &--column {
+      flex-direction: column;
+    }
+
+    &--row {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .controls-group__input {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .controls-group__wrap {
+    width: 1050px;
+
+    &--reduce {
+      width: 875px;
+    }
+  }
+
+  .controls-group__title {
+    width: 175px;
+    padding-left: 60px;
+
+    &--fullname,
+    &--phone,
+    &--email {
+      flex-shrink: 0;
+    }
+
+    &--color {
+      padding-top: 21px;
+    }
+  }
+
+  .controls-group__labels {
+    width: 875px;
+  }
+}

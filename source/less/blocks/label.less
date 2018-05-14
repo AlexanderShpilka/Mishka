@@ -1,0 +1,21 @@
+.label {
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #000000;
+
+  overflow-wrap: break-word;
+}
+
+@media (min-width: @tablet-width) {
+  .label {
+    padding-right: 25px;
+
+    font-size: 19px;
+
+    &--name {
+      padding-top: 8px;
+    }
+  }
+}

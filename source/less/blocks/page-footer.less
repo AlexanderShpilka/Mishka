@@ -1,0 +1,30 @@
+.page-footer {
+  min-height: 160px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: @secondaryColor;
+}
+
+.page-footer__social {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    min-height: 140px;
+  }
+
+  .page-footer__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__social {
+    margin-left: 190px;
+  }
+}

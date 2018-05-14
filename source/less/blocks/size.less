@@ -1,0 +1,32 @@
+.size {
+  cursor: pointer;
+}
+
+.size__control:hover + .size__label {
+  border-color: rgba(68, 68, 68, 0.3);
+}
+
+.size__control:active + .size__label,
+.size__control:checked + .size__label {
+  border-color: @greenLight;
+}
+
+.size__label {
+  display: block;
+  width: 82px;
+  height: 52px;
+  padding-top: 11px;
+
+  font-size: 17px;
+  font-weight: 700;
+  color: #444444;
+  text-align: center;
+
+  border: 2px solid rgba(68, 68, 68, 0.1);
+}
+
+@media (min-width: @tablet-width) {
+  .size__label {
+    width: 110px;
+  }
+}

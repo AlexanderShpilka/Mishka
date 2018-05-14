@@ -1,0 +1,57 @@
+.logo {
+  &--header:hover {
+    opacity: 0.6;
+  }
+
+  &--header:active {
+    opacity: 0.3;
+  }
+}
+
+.logo--footer {
+  display: none;
+}
+
+.logo-img {
+  &--header {
+    width: 86px;
+    height: 35px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .logo-img {
+    &--header {
+      width: 113px;
+      height: 46px;
+    }
+  }
+
+  .logo--footer {
+    display: block;
+    padding-top: 12px;
+    margin-right: 143px;
+  }
+
+  .logo__footer-icon {
+    fill: #231f20;
+
+    &:hover {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo-img {
+    &--header {
+      width: 149px;
+      height: 72px;
+    }
+  }
+}

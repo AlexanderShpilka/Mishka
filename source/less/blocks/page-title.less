@@ -1,0 +1,43 @@
+.page-title {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #000000;
+
+  text-align: center;
+
+  &--index {
+    padding-top: 55px;
+  }
+
+  &--form {
+    color: #231f20;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-title {
+    font-size: 43px;
+    line-height: 50px;
+
+    &--index {
+      padding-top: 112px;
+    }
+
+    &--inner {
+      padding-top: 54px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

@@ -1,0 +1,90 @@
+.form {
+  padding-top: 15px;
+  padding-bottom: 55px;
+}
+
+.form__intro {
+  padding-top: 8px;
+  padding-bottom: 20px;
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #444444;
+}
+
+.form__legend {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #444444;
+}
+
+.form__button {
+  margin-top: 30px;
+}
+
+.form__item {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    padding-top: 31px;
+    padding-bottom: 50px;
+  }
+
+  .form__intro {
+    padding-top: 44px;
+    padding-bottom: 5px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form__item {
+    &--background {
+      background-color: @secondaryColor;
+    }
+  }
+
+  .form__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .form__legend {
+    order: 1;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form__button {
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    padding-top: 35px;
+  }
+
+  .form__intro {
+    padding-top: 90px;
+    padding-right: 175px;
+    padding-left: 175px;
+  }
+
+  .form__legend {
+    padding-right: 175px;
+  }
+
+  .form__button {
+    margin-top: 9px;
+    margin-left: 175px;
+  }
+}

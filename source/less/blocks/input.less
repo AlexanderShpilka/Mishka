@@ -1,0 +1,141 @@
+.input {
+  padding-bottom: 20px;
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+
+  &--phone,
+  &--email {
+    position: relative;
+  }
+}
+
+.input--phone:hover,
+.input--email:hover,
+.input--phone:active,
+.input--email:active {
+  .input__phone-icon,
+  .input__mail-icon {
+    fill: #62d1ba;
+  }
+}
+
+.input__control {
+  display: block;
+  width: 260px;
+  padding: 15px 0;
+  padding-bottom: 12px;
+
+  font-family: @main-font;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #444444;
+
+  border: none;
+  border-bottom: 2px solid #000000;
+
+  &::placeholder {
+    font-family: @main-font;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &--phone {
+    padding-right: 40px;
+  }
+
+  &--email {
+    padding-right: 55px;
+  }
+
+  &:hover,
+  &:active {
+    border-bottom: 2px solid #62d1ba;
+  }
+}
+
+.input__phone-icon {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.input__mail-icon {
+  position: absolute;
+  top: 7px;
+  right: 4px;
+
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: @tablet-width) {
+  .input {
+    flex-grow: 1;
+    padding-top: 17px;
+    padding-bottom: 14px;
+
+    &:last-of-type {
+      padding-bottom: 11px;
+    }
+  }
+
+  .input__control {
+    flex-grow: 1;
+    padding-top: 5px;
+    padding-bottom: 17px;
+    padding-left: 15px;
+
+    font-size: 19px;
+    line-height: 21px;
+
+    background-color: transparent;
+
+    &--phone,
+    &--email {
+      padding-right: 70px;
+      background-position: 450px 0;
+    }
+
+    &--email {
+      padding-top: 8px;
+      padding-bottom: 16px;
+    }
+
+    &::placeholder {
+      font-size: 19px;
+    }
+  }
+
+  .input__phone-icon {
+    top: 20px;
+    right: 27px;
+  }
+
+  .input__mail-icon {
+    top: 23px;
+    right: 23px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .input__control {
+    &--phone,
+    &--email {
+      background-position: 665px 0;
+    }
+  }
+
+  .input__phone-icon {
+    right: 8px;
+  }
+
+  .input__mail-icon {
+    right: 4px;
+  }
+}
